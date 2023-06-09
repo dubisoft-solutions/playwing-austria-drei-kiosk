@@ -2,21 +2,21 @@
     padding: 0;
 }
 
-.btn-warning {
-    font-weight: 500;
+.btn-success {
+    font-weight: 600;
     font-size: 1.25rem;
-    color: $black;
+    color: $black-30;
     background: $green;
-    border-radius: 1.875rem;
+    border-radius: 0;
     border: none;
-    padding: .875rem;
+    padding: 1.5rem;
     text-decoration: none;
 }
 
 .btn-link {
-    font-weight: 500;
+    font-weight: normal;
     font-size: .75rem;
-    color: $green;
+    color: $grey-164;
     border: none;
     background-color: transparent;
     text-decoration: underline;

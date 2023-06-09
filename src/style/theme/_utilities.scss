@@ -1,7 +1,7 @@
 body {
     background-color: $white;
     margin: 0;
-    font-family: " Inter", sans-serif;
+    font-family: " Montserrat", sans-serif;
 }
 
 .container {
@@ -16,12 +16,43 @@ a {
     cursor: pointer;
 }
 
+.d-flex {
+    display: flex;
+}
+
+.justify-content-center {
+    justify-content: center;
+}
+
+.flex-column {
+    flex-direction: column;
+}
+
+.position-absolute {
+    position: absolute;
+}
+
+.fit-parent {
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
 .text-white {
     color: $white;
 }
 
+.text-success {
+    color: $green;
+}
+
+.text-dark {
+    color: $black-50;
+}
+
 .text-secondary {
-    color: $black-14;
+    color: $grey-153;
 }
 
 .text-center {

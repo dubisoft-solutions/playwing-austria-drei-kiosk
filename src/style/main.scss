@@ -3,21 +3,42 @@ html {
     font-size: 16px;
 }
 
+header {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+}
+
+.navbar {
+    .navbar-nav {
+        padding-left: 0;
+        position: relative;
+        z-index: 1;
+        list-style-type: none;
+        display: flex;
+        justify-content: end;
+    }
+    .navbar-brand-img {
+        width: 3.125rem;
+    }
+}
+
 .main {
     display: flex;
     flex-direction: column;
     min-height: 88vh;
     .banner {
         position: relative;
-        height: 91vw;
-        @media (min-width: 768px) {
-            height: 710px;
+        min-height: 138vw;
+        @media (min-width: 576px) {
+            min-height: 580px;
         }
         @media (min-width: 992px) {
-            height: 480px;
+            min-height: 480px;
         }
         @media (min-width: 1200px) {
-            height: 580px;
+            min-height: 580px;
         }
         .banner-bg {
             width: 100%;
@@ -29,38 +50,15 @@ html {
                 object-fit: contain;
             }
         }
-        .banner-logo {
-            position: absolute;
-            top: 15vh;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            z-index: 1;
-            @media (min-width: 576px) {
-                top: 20vh;
-            }
-            @media (min-width: 768px) {
-                top: 30vh;
-            }
-            @media (min-width: 1200px) {
-                top: 25vh;
-            }
+        .banner-text {
+            margin-top: 9.375rem;
         }
-        .banner-shadow {
-            background: linear-gradient(179.84deg, rgba(253, 231, 239, 0) 5.2%, #FFFFFF 50%);
-            width: 100%;
-            height: 126px;
-            position: absolute;
-            bottom: 0;
-            .banner-text {
-                position: absolute;
-                bottom: -.938rem;
-                right: 0;
-                left: 0;
-            }
+        .banner-cta-icon {
+            margin-top: auto;
         }
     }
     .hero {
-        padding: 3rem 0 2rem 0;
+        padding: 1rem 0 2rem 0;
     }
     .footer {
         margin-top: auto;
@@ -74,9 +72,9 @@ html {
                 border-right: 1px solid $black-70;
                 padding-bottom: .25rem;
                 .btn-link {
-                    font-weight: 400;
+                    font-weight: normal;
                     font-size: .75rem;
-                    color: $black;
+                    color: $grey-131;
                 }
             }
             .list-inline-item:last-child {
