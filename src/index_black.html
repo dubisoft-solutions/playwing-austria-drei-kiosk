@@ -2,8 +2,47 @@
 <html lang="lv">
 //= html_partials/head.html
 
-<body>
+<body class="index-black">
+    <main class="main">
+        <!-- Main section -->
+        <section class="banner">
+            <!-- Header -->
+            //= html_partials/header-black.html
 
+            <img src="img/hero-bg.png" alt="Banner image" class="banner-bg">
+
+            <div class="container d-flex flex-column text-center position-absolute fit-parent">
+                <div class="banner-text">
+                    <h1 class="text-center">Lies <span class="text-success">jetzt</span></h1>
+                    <p class="text-center">Zugriff auf eine große Auswahl <br>an <span class="text-success">Top-Magazinen</span></br>
+                    </p>
+                </div>
+                <div class="banner-cta-icon">
+                    <img src="img/arrow-down-icon.svg" alt="arrow down icon">
+                </div>
+            </div>
+        </section>
+        <section class="hero">
+            <div class="container">
+                <p class="text-description text-center mb-3">
+                    Abonnement: 3.90€ inkl. MwSt/Woche
+                </p>
+
+                <button type="button" class="btn btn-success btn-block join-button mb-4" id="subLink">Kaufen</button>
+
+                <div class="text-center px-4">
+                    <p class="text-description mb-4">Greifen Sie jederzeit und überall auf Ihre Lieblingszeitschriften. Kompatibel mit Android- und iOS-Geräten, aber auch für Tablets, Feature-Phones und andere Plattformen verfügbar. Die Inhalte werden täglich aktualisiert, sodass Sie
+                        die heißesten und neuesten Themen nicht verpassen. Sie können Ihr Abonnement jederzeit unter der Rubrik <a href="#" class="btn btn-link">Mein Konto</a> oder über diesen Link kündigen <a href="#" class="btn btn-link">https://mobileinfo.biz/</a>.
+                        Die Kosten werden Ihrer Handyrechnung hinzugefügt. Klicken Sie hier, um weitere Informationen zu unseren <a href="#" class="btn btn-link">AGB</a> zu erhalten.</p>
+                </div>
+                <div class="text-center">
+                    <a href="#" class="btn btn-link">Abbrechen</a>
+                </div>
+            </div>
+        </section>
+        <!-- Footer -->
+        //= html_partials/footer.html
+    </main>
 </body>
 
 //= html_partials/scripts.html
