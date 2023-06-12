@@ -1,33 +1,33 @@
 @font-face {
-  font-family: "Inter";
-  src: url("../fonts/Inter-SemiBold.eot");
-  src: url("../fonts/Inter-SemiBold.eot?#iefix") format("embedded-opentype"), url("../fonts/Inter-SemiBold.woff2") format("woff2"), url("../fonts/Inter-SemiBold.woff") format("woff"), url("../fonts/Inter-SemiBold.ttf") format("truetype"), url("../fonts/Inter-SemiBold.svg#Inter-SemiBold") format("svg");
+  font-family: "Montserrat";
+  src: url("../fonts/Montserrat-SemiBold.eot");
+  src: url("../fonts/Montserrat-SemiBold.eot?#iefix") format("embedded-opentype"), url("../fonts/Montserrat-SemiBold.woff2") format("woff2"), url("../fonts/Montserrat-SemiBold.woff") format("woff"), url("../fonts/Montserrat-SemiBold.ttf") format("truetype"), url("../fonts/Montserrat-SemiBold.svg#Montserrat-SemiBold") format("svg");
   font-weight: 600;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
-  font-family: "Inter";
-  src: url("../fonts/Inter-Regular.eot");
-  src: url("../fonts/Inter-Regular.eot?#iefix") format("embedded-opentype"), url("../fonts/Inter-Regular.woff2") format("woff2"), url("../fonts/Inter-Regular.woff") format("woff"), url("../fonts/Inter-Regular.ttf") format("truetype"), url("../fonts/Inter-Regular.svg#Inter-Regular") format("svg");
-  font-weight: normal;
-  font-style: normal;
-  font-display: swap;
-}
-@font-face {
-  font-family: "Inter";
-  src: url("../fonts/Inter-Medium.eot");
-  src: url("../fonts/Inter-Medium.eot?#iefix") format("embedded-opentype"), url("../fonts/Inter-Medium.woff2") format("woff2"), url("../fonts/Inter-Medium.woff") format("woff"), url("../fonts/Inter-Medium.ttf") format("truetype"), url("../fonts/Inter-Medium.svg#Inter-Medium") format("svg");
+  font-family: "Montserrat";
+  src: url("../fonts/Montserrat-Medium.eot");
+  src: url("../fonts/Montserrat-Medium.eot?#iefix") format("embedded-opentype"), url("../fonts/Montserrat-Medium.woff2") format("woff2"), url("../fonts/Montserrat-Medium.woff") format("woff"), url("../fonts/Montserrat-Medium.ttf") format("truetype"), url("../fonts/Montserrat-Medium.svg#Montserrat-Medium") format("svg");
   font-weight: 500;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
-  font-family: "Inter";
-  src: url("../fonts/Inter-ExtraBold.eot");
-  src: url("../fonts/Inter-ExtraBold.eot?#iefix") format("embedded-opentype"), url("../fonts/Inter-ExtraBold.woff2") format("woff2"), url("../fonts/Inter-ExtraBold.woff") format("woff"), url("../fonts/Inter-ExtraBold.ttf") format("truetype"), url("../fonts/Inter-ExtraBold.svg#Inter-ExtraBold") format("svg");
-  font-weight: bold;
+  font-family: "Montserrat";
+  src: url("../fonts/Montserrat-Regular.eot");
+  src: url("../fonts/Montserrat-Regular.eot?#iefix") format("embedded-opentype"), url("../fonts/Montserrat-Regular.woff2") format("woff2"), url("../fonts/Montserrat-Regular.woff") format("woff"), url("../fonts/Montserrat-Regular.ttf") format("truetype"), url("../fonts/Montserrat-Regular.svg#Montserrat-Regular") format("svg");
+  font-weight: normal;
   font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Montserrat";
+  src: url("../fonts/Montserrat-ExtraBoldItalic.eot");
+  src: url("../fonts/Montserrat-ExtraBoldItalic.eot?#iefix") format("embedded-opentype"), url("../fonts/Montserrat-ExtraBoldItalic.woff2") format("woff2"), url("../fonts/Montserrat-ExtraBoldItalic.woff") format("woff"), url("../fonts/Montserrat-ExtraBoldItalic.ttf") format("truetype"), url("../fonts/Montserrat-ExtraBoldItalic.svg#Montserrat-ExtraBoldItalic") format("svg");
+  font-weight: bold;
+  font-style: italic;
   font-display: swap;
 }
 @font-face {
@@ -54,21 +54,21 @@
   padding: 0;
 }
 
-.btn-warning {
-  font-weight: 500;
+.btn-success {
+  font-weight: 600;
   font-size: 1.25rem;
-  color: #110E3A;
-  background: #6ABC68;
-  border-radius: 1.875rem;
+  color: #1F211E;
+  background: #1DC574;
+  border-radius: 0;
   border: none;
-  padding: 0.875rem;
+  padding: 1.5rem;
   text-decoration: none;
 }
 
 .btn-link {
-  font-weight: 500;
+  font-weight: normal;
   font-size: 0.75rem;
-  color: #6ABC68;
+  color: #A4A4A4;
   border: none;
   background-color: transparent;
   text-decoration: underline;
@@ -79,10 +79,25 @@
   width: 100%;
 }
 
+.arrow,
+.steps {
+  background: #1F1F1F;
+}
+.arrow .btn-success,
+.steps .btn-success {
+  font-size: 1.375rem;
+  color: #FFFFFF;
+  background: linear-gradient(-180deg, #1DC574 -30.68%, #08D77A 100%);
+  border-radius: 0.625rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+}
+
 body {
-  background-color: #FFFFFF;
   margin: 0;
-  font-family: " Inter", sans-serif;
+  font-family: " Montserrat", sans-serif;
 }
 
 .container {
@@ -97,12 +112,51 @@ a {
   cursor: pointer;
 }
 
+.d-flex {
+  display: flex;
+}
+
+.justify-content-center {
+  justify-content: center;
+}
+
+.justify-content-start {
+  justify-content: start;
+}
+
+.align-center {
+  align-items: center;
+}
+
+.flex-column {
+  flex-direction: column;
+}
+
+.position-absolute {
+  position: absolute;
+}
+
+.fit-parent {
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+}
+
 .text-white {
   color: #FFFFFF;
 }
 
+.text-success {
+  color: #1DC574;
+}
+
+.text-dark {
+  color: #323232;
+}
+
 .text-secondary {
-  color: #0E0E0E;
+  color: #999999;
 }
 
 .text-center {
@@ -130,39 +184,96 @@ a {
 }
 
 p {
-  font-size: 0.75rem;
-  color: #110E3A;
-  margin-bottom: 0;
+  font-size: 1rem;
   margin-top: 0;
 }
 
 h1 {
   font-weight: bold;
-  font-size: 2.375rem;
-  color: #6ABC68;
-  margin-bottom: 0;
+  font-style: italic;
+  font-size: 2.75rem;
+  text-transform: uppercase;
+  margin-bottom: 1.5rem;
+}
+
+h2 {
+  font-weight: bold;
+  font-size: 1.25rem;
+  margin-bottom: 1.5rem;
+}
+
+h3 {
+  font-weight: bold;
+  font-size: 0.813rem;
+  margin-bottom: 1.5rem;
 }
 
 .text-description {
-  font-weight: 600;
-  font-size: 0.75rem;
-  color: #423245;
-  margin-bottom: 2.375rem;
+  font-weight: 400;
+  font-size: 0.688rem;
+}
+.text-description a {
+  font-weight: 400;
+  font-size: 0.688rem;
 }
 
-.text-description-second {
-  font-weight: 400;
-  font-size: 0.688rem;
-  color: #423245;
-  margin-bottom: 1rem;
+.index-white p {
+  color: #333333;
 }
-.text-description-second a {
-  font-weight: 400;
-  font-size: 0.688rem;
+.index-white h1 {
+  color: #333333;
+}
+.index-white .text-description {
+  color: #A59B9B;
+}
+
+.index-black p {
+  color: #DEDEDE;
+}
+.index-black h1 {
+  color: #DEDEDE;
+}
+.index-black h2 {
+  color: #ECECEC;
+}
+.index-black h3 {
+  color: #A9A9A9;
+}
+.index-black .text-description {
+  color: #A59B9B;
+}
+
+.index-grey p {
+  color: #DEDEDE;
+}
+.index-grey h3 {
+  text-transform: capitalize;
+}
+.index-grey .text-description {
+  color: #A59B9B;
 }
 
 html {
   font-size: 16px;
+}
+
+header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
+.navbar .navbar-nav {
+  padding-right: 0;
+  position: relative;
+  z-index: 1;
+  list-style-type: none;
+  display: flex;
+  justify-content: end;
+}
+.navbar .navbar-brand-img {
+  width: 3.125rem;
 }
 
 .main {
@@ -172,21 +283,21 @@ html {
 }
 .main .banner {
   position: relative;
-  height: 91vw;
+  min-height: 138vw;
 }
-@media (min-width: 768px) {
+@media (min-width: 576px) {
   .main .banner {
-    height: 710px;
+    min-height: 580px;
   }
 }
 @media (min-width: 992px) {
   .main .banner {
-    height: 480px;
+    min-height: 480px;
   }
 }
 @media (min-width: 1200px) {
   .main .banner {
-    height: 580px;
+    min-height: 580px;
   }
 }
 .main .banner .banner-bg {
@@ -201,43 +312,22 @@ html {
     object-fit: contain;
   }
 }
-.main .banner .banner-logo {
-  position: absolute;
-  top: 15vh;
-  right: 50%;
-  transform: translate(50%, -50%);
-  z-index: 1;
+.main .banner .banner-text {
+  margin-top: 9.375rem;
 }
-@media (min-width: 576px) {
-  .main .banner .banner-logo {
-    top: 20vh;
-  }
+.main .banner .banner-text-right {
+  margin-top: 2.375rem;
+  display: flex;
+  justify-content: end;
+  text-align: end;
+  color: #A1A1A1;
+  font-size: 0.75rem;
 }
-@media (min-width: 768px) {
-  .main .banner .banner-logo {
-    top: 30vh;
-  }
-}
-@media (min-width: 1200px) {
-  .main .banner .banner-logo {
-    top: 25vh;
-  }
-}
-.main .banner .banner-shadow {
-  background: linear-gradient(-179.84deg, rgba(253, 231, 239, 0) 5.2%, #FFFFFF 50%);
-  width: 100%;
-  height: 126px;
-  position: absolute;
-  bottom: 0;
-}
-.main .banner .banner-shadow .banner-text {
-  position: absolute;
-  bottom: -0.938rem;
-  left: 0;
-  right: 0;
+.main .banner .banner-cta-icon {
+  margin-top: auto;
 }
 .main .hero {
-  padding: 3rem 0 2rem 0;
+  padding: 1rem 0 2rem 0;
 }
 .main .footer {
   margin-top: auto;
@@ -254,13 +344,73 @@ html {
   padding-bottom: 0.25rem;
 }
 .main .footer .list-inline .list-inline-item .btn-link {
-  font-weight: 400;
+  font-weight: normal;
   font-size: 0.75rem;
-  color: #110E3A;
+  color: #838383;
 }
 .main .footer .list-inline .list-inline-item:last-child {
   border-left: none;
 }
 .main .footer .list-inline .list-inline-item.border-right:last-child {
   border-left: 1px solid #464646;
+}
+
+.index-white {
+  background: linear-gradient(-180deg, #E8E8E8 0%, #FFFFFF 100%);
+}
+.index-white .notification-text {
+  color: #333333;
+}
+
+.index-grey {
+  background: #EEEFF3;
+}
+.index-grey .hero {
+  background: linear-gradient(to bottom, #e3e4e8 60px, #EEEFF3 0);
+}
+@media (min-width: 576px) {
+  .index-grey .hero {
+    background: none;
+  }
+}
+
+.index-black {
+  background: linear-gradient(-180deg, #1F211E 0%, #0D0E0D 100%);
+}
+.index-black.steps {
+  background: #222223;
+}
+
+.arrow .banner,
+.steps .banner {
+  min-height: 115vw;
+}
+@media (min-width: 576px) {
+  .arrow .banner,
+  .steps .banner {
+    min-height: 480px;
+  }
+}
+
+.notification-container {
+  width: 2.25rem;
+  height: 2.25rem;
+  background: linear-gradient(-180deg, #1DC574 -30.68%, #18E187 100%);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.notification-container .notification-number {
+  font-weight: 500;
+  font-size: 1.5rem;
+  color: #FFFFFF;
+}
+
+.notification-text {
+  font-weight: 400;
+  font-size: 0.75rem;
+  color: #ECECEC;
+  padding-right: 0.938rem;
+  text-align: start;
 }
