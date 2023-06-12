@@ -106,6 +106,9 @@ header {
     background: #EEEFF3;
     .hero {
         background: linear-gradient(to bottom, #e3e4e8 60px, #EEEFF3 0);
+        @media (min-width: 576px) {
+            background: none;
+        }
     }
 }
 
@@ -120,6 +123,9 @@ header {
 .steps {
     .banner {
         min-height: 115vw;
+        @media (min-width: 576px) {
+            min-height: 480px;
+        }
     }
 }
 
