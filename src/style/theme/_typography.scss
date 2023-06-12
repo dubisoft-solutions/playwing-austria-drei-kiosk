@@ -11,6 +11,18 @@ h1 {
     margin-bottom: 1.5rem;
 }
 
+h2 {
+    font-weight: bold;
+    font-size: 1.25rem;
+    margin-bottom: 1.5rem;
+}
+
+h3 {
+    font-weight: bold;
+    font-size: .813rem;
+    margin-bottom: 1.5rem;
+}
+
 .text-description {
     font-weight: 400;
     font-size: .688rem;
@@ -38,6 +50,24 @@ h1 {
     }
     h1 {
         color: $light-grey;
+    }
+    h2 {
+        color: $grey-236;
+    }
+    h3 {
+        color: $grey-169;
+    }
+    .text-description {
+        color: $grey;
+    }
+}
+
+.index-grey {
+    p {
+        color: $light-grey;
+    }
+    h3 {
+        text-transform: capitalize;
     }
     .text-description {
         color: $grey;

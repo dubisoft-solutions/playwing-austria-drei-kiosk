@@ -53,6 +53,14 @@ header {
         .banner-text {
             margin-top: 9.375rem;
         }
+        .banner-text-right {
+            margin-top: 2.375rem;
+            display: flex;
+            justify-content: end;
+            text-align: end;
+            color: $grey-161;
+            font-size: .75rem;
+        }
         .banner-cta-icon {
             margin-top: auto;
         }
@@ -89,8 +97,51 @@ header {
 
 .index-white {
     background: linear-gradient(180deg, #E8E8E8 0%, #FFFFFF 100%);
+    .notification-text {
+        color: $black;
+    }
+}
+
+.index-grey {
+    background: #EEEFF3;
+    .hero {
+        background: linear-gradient(to bottom, #e3e4e8 60px, #EEEFF3 0);
+    }
 }
 
 .index-black {
     background: linear-gradient(180deg, #1F211E 0%, #0D0E0D 100%);
+    &.steps {
+        background: $black-34;
+    }
+}
+
+.arrow,
+.steps {
+    .banner {
+        min-height: 115vw;
+    }
+}
+
+.notification-container {
+    width: 2.25rem;
+    height: 2.25rem;
+    background: linear-gradient(180deg, #1DC574 -30.68%, #18E187 100%);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .notification-number {
+        font-weight: 500;
+        font-size: 1.5rem;
+        color: $white;
+    }
+}
+
+.notification-text {
+    font-weight: 400;
+    font-size: .75rem;
+    color: $grey-236;
+    padding-left: .938rem;
+    text-align: start;
 }

@@ -26,3 +26,18 @@
     display: block;
     width: 100%;
 }
+
+.arrow,
+.steps {
+    background: #1F1F1F;
+    .btn-success {
+        font-size: 1.375rem;
+        color: $white;
+        background: linear-gradient(180deg, #1DC574 -30.68%, #08D77A 100%);
+        border-radius: .625rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 0;
+    }
+}
