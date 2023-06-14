@@ -24,6 +24,19 @@ header {
     }
 }
 
+.playwing {
+    .navbar-nav {
+        justify-content: start;
+    }
+    .main {
+        .banner {
+            .banner-text {
+                margin-top: 3.375rem;
+            }
+        }
+    }
+}
+
 .main {
     display: flex;
     flex-direction: column;
@@ -141,6 +154,12 @@ header {
         font-weight: 500;
         font-size: 1.5rem;
         color: $white;
+    }
+}
+
+.mind {
+    .notification-container {
+        background: $aqua-marine;
     }
 }
 

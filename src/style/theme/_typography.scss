@@ -39,6 +39,10 @@ h3 {
     h1 {
         color: $black;
     }
+    h3 {
+        font-size: 1rem;
+        text-transform: capitalize;
+    }
     .text-description {
         color: $grey;
     }
@@ -71,5 +75,11 @@ h3 {
     }
     .text-description {
         color: $grey;
+    }
+}
+
+.mind {
+    .text-description {
+        text-transform: capitalize;
     }
 }
