@@ -94,6 +94,15 @@
   align-items: center;
   padding: 0;
 }
+.arrow.mind .btn-success,
+.steps.mind .btn-success {
+  background: #1DC5A7;
+}
+.arrow.playwing .btn-success,
+.steps.playwing .btn-success {
+  background: #12CF0F;
+  box-shadow: 0px 4px 4px #24CB80;
+}
 
 body {
   margin: 0;
@@ -223,6 +232,10 @@ h3 {
 .index-white h1 {
   color: #333333;
 }
+.index-white h3 {
+  font-size: 1rem;
+  text-transform: capitalize;
+}
 .index-white .text-description {
   color: #A59B9B;
 }
@@ -253,6 +266,10 @@ h3 {
   color: #A59B9B;
 }
 
+.mind .text-description {
+  text-transform: capitalize;
+}
+
 html {
   font-size: 16px;
 }
@@ -274,6 +291,13 @@ header {
 }
 .navbar .navbar-brand-img {
   width: 3.125rem;
+}
+
+.playwing .navbar-nav {
+  justify-content: start;
+}
+.playwing .main .banner .banner-text {
+  margin-top: 3.375rem;
 }
 
 .main {
@@ -405,6 +429,10 @@ header {
   font-weight: 500;
   font-size: 1.5rem;
   color: #FFFFFF;
+}
+
+.mind .notification-container {
+  background: #1DC5A7;
 }
 
 .notification-text {
