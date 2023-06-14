@@ -364,6 +364,36 @@ gulp.task("zip:steps", gulp.series('zip:tmp',
     }
 ))
 
+gulp.task("zip:steps-mind", gulp.series('zip:tmp', 
+    function() {
+        return killOthers(/\/$|steps_mind\.html/);
+    }, 
+    function() {
+        return makeCopy('steps_mind.html', 'index')
+    },
+    function() {
+        return killOthers(/\/$|index\.html/);
+    },
+    function() {
+        return createArchive(baseName + 'steps-mind-template.zip')
+    }
+))
+
+gulp.task("zip:arrow-playwing", gulp.series('zip:tmp', 
+    function() {
+        return killOthers(/\/$|arrow_playwing\.html/);
+    }, 
+    function() {
+        return makeCopy('arrow_playwing.html', 'index')
+    },
+    function() {
+        return killOthers(/\/$|index\.html/);
+    },
+    function() {
+        return createArchive(baseName + 'arrow-playwing-template.zip')
+    }
+))
+
 gulp.task("zip:steps-black", gulp.series('zip:tmp', 
     function() {
         return killOthers(/\/$|steps_black\.html/);
@@ -391,6 +421,8 @@ gulp.task("release", gulp.series(
     "zip:arrow-black",
     "zip:steps", 
     "zip:steps-black",
+    "zip:steps-mind",
+    "zip:arrow-playwing",
 ));
 
 /**
