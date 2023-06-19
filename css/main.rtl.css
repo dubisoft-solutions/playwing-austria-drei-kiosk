@@ -103,6 +103,7 @@
   background: #12CF0F;
   box-shadow: 0px 4px 4px #24CB80;
   text-transform: uppercase;
+  padding: 0.938rem;
 }
 
 body {
@@ -191,6 +192,10 @@ a {
 
 .mb-4 {
   margin-bottom: 1.5rem;
+}
+
+.me-4 {
+  margin-right: 1.5rem;
 }
 
 p {
