@@ -52,5 +52,13 @@
             text-transform: uppercase;
             padding: .938rem;
         }
+        &.download {
+            .btn-success {
+                background: #00B262;
+                box-shadow: 0px 4px 4px #24CB80;
+                text-transform: uppercase;
+                padding: .938rem;
+            }
+        }
     }
 }
