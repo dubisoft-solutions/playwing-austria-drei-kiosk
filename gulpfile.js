@@ -46,24 +46,24 @@ const conf = require('./conf.json');
 /* Gulp config */
 const sass = require('gulp-sass')(require('sass'));
 const gulp = require("gulp"),
-      minify = require("gulp-minify"),
-      webserver = require("browser-sync"),
-      plumber = require("gulp-plumber"),
-      rigger = require("gulp-rigger"),
-      sourcemaps = require("gulp-sourcemaps"),
-      autoprefixer = require("gulp-autoprefixer"),
-      cleanCSS = require("gulp-clean-css"),
-      cache = require("gulp-cache"),
-      rimraf = require("gulp-rimraf"),
-      iconfont = require('gulp-iconfont'),
-      iconfontCss = require('gulp-iconfont-css'),
-      rename = require("gulp-rename"),
-      rtlcss = require('gulp-rtlcss'),
-      zip = require('gulp-zip'),
-      chmod = require('gulp-chmod'),
-      gulpEach = require('gulp-each'),
-      gulpRename = require('gulp-rename'),
-      gulpDelete = require('gulp-delete-file');
+    minify = require("gulp-minify"),
+    webserver = require("browser-sync"),
+    plumber = require("gulp-plumber"),
+    rigger = require("gulp-rigger"),
+    sourcemaps = require("gulp-sourcemaps"),
+    autoprefixer = require("gulp-autoprefixer"),
+    cleanCSS = require("gulp-clean-css"),
+    cache = require("gulp-cache"),
+    rimraf = require("gulp-rimraf"),
+    iconfont = require('gulp-iconfont'),
+    iconfontCss = require('gulp-iconfont-css'),
+    rename = require("gulp-rename"),
+    rtlcss = require('gulp-rtlcss'),
+    zip = require('gulp-zip'),
+    chmod = require('gulp-chmod'),
+    gulpEach = require('gulp-each'),
+    gulpRename = require('gulp-rename'),
+    gulpDelete = require('gulp-delete-file');
 
 /* Main tasks */
 
@@ -79,7 +79,7 @@ gulp.task("webserver", function() {
  */
 gulp.task("html:build", function() {
     return gulp
-        .src(path.src.html) 
+        .src(path.src.html)
         .pipe(plumber())
         .pipe(rigger())
         .pipe(gulp.dest(path.build.html))
@@ -91,18 +91,18 @@ gulp.task("html:build", function() {
  */
 gulp.task("replace:sys-blocks", function() {
     return gulp.src(path.build.html + "*")
-        .pipe (gulpEach (function(content, file, callback ) {
+        .pipe(gulpEach(function(content, file, callback) {
             let updatedContent = content;
 
-            conf.devReplacements.forEach ((item) => {
-                let textPos = updatedContent.search (item.name);
+            conf.devReplacements.forEach((item) => {
+                let textPos = updatedContent.search(item.name);
 
                 while (textPos >= 0) {
-                    updatedContent = updatedContent.replace ( item.name, item.value);
-                    textPos = updatedContent.search (item.name);
+                    updatedContent = updatedContent.replace(item.name, item.value);
+                    textPos = updatedContent.search(item.name);
                 }
-            } )
-            callback ( null, updatedContent );
+            })
+            callback(null, updatedContent);
         }))
         .pipe(gulp.dest(path.build.html));
 });
@@ -110,7 +110,7 @@ gulp.task("replace:sys-blocks", function() {
 /**
  * Builds the svg icons to font
  */
- gulp.task('fonticons:build', function() {
+gulp.task('fonticons:build', function() {
     const fontName = 'IconsFont';
     return gulp.src([path.src.fontIcons])
         .pipe(iconfontCss({
@@ -133,9 +133,9 @@ gulp.task("replace:sys-blocks", function() {
 /**
  * Build styles
  */
- gulp.task("css:build-ltr", function() {
+gulp.task("css:build-ltr", function() {
     return gulp
-        .src(path.src.style) 
+        .src(path.src.style)
         .pipe(sourcemaps.init())
         .pipe(plumber())
         .pipe(sass({
@@ -153,7 +153,7 @@ gulp.task("replace:sys-blocks", function() {
 
 gulp.task("css:build-rtl", function() {
     return gulp
-        .src(path.src.style) 
+        .src(path.src.style)
         .pipe(sourcemaps.init())
         .pipe(plumber())
         .pipe(sass({
@@ -286,26 +286,26 @@ function createArchive(name) {
 
 function makeCopy(srcName, destBaseName) {
     return gulp.src(path.release.themeFolder + '/' + srcName)
-            .pipe(gulpRename(function (path) {
-                path.basename = destBaseName;
-            }))
-            .pipe(gulp.dest(path.release.themeFolder));
+        .pipe(gulpRename(function(path) {
+            path.basename = destBaseName;
+        }))
+        .pipe(gulp.dest(path.release.themeFolder));
 }
 
 
-gulp.task("zip:index", gulp.series('zip:tmp', 
+gulp.task("zip:index", gulp.series('zip:tmp',
     function() {
         return killOthers(/\/$|index\.html/);
-    }, 
+    },
     function() {
         return createArchive(baseName + 'index-template.zip')
     }
 ))
 
-gulp.task("zip:index-black", gulp.series('zip:tmp', 
+gulp.task("zip:index-black", gulp.series('zip:tmp',
     function() {
         return killOthers(/\/$|index_black\.html/);
-    }, 
+    },
     function() {
         return makeCopy('index_black.html', 'index')
     },
@@ -318,10 +318,10 @@ gulp.task("zip:index-black", gulp.series('zip:tmp',
 ))
 
 
-gulp.task("zip:arrow", gulp.series('zip:tmp', 
+gulp.task("zip:arrow", gulp.series('zip:tmp',
     function() {
         return killOthers(/\/$|arrow\.html/);
-    }, 
+    },
     function() {
         return makeCopy('arrow.html', 'index')
     },
@@ -333,10 +333,10 @@ gulp.task("zip:arrow", gulp.series('zip:tmp',
     }
 ))
 
-gulp.task("zip:arrow-black", gulp.series('zip:tmp', 
+gulp.task("zip:arrow-black", gulp.series('zip:tmp',
     function() {
         return killOthers(/\/$|arrow_black\.html/);
-    }, 
+    },
     function() {
         return makeCopy('arrow_black.html', 'index')
     },
@@ -349,10 +349,10 @@ gulp.task("zip:arrow-black", gulp.series('zip:tmp',
 ))
 
 
-gulp.task("zip:steps", gulp.series('zip:tmp', 
+gulp.task("zip:steps", gulp.series('zip:tmp',
     function() {
         return killOthers(/\/$|steps\.html/);
-    }, 
+    },
     function() {
         return makeCopy('steps.html', 'index')
     },
@@ -364,10 +364,10 @@ gulp.task("zip:steps", gulp.series('zip:tmp',
     }
 ))
 
-gulp.task("zip:steps-mind", gulp.series('zip:tmp', 
+gulp.task("zip:steps-mind", gulp.series('zip:tmp',
     function() {
         return killOthers(/\/$|steps_mind\.html/);
-    }, 
+    },
     function() {
         return makeCopy('steps_mind.html', 'index')
     },
@@ -379,10 +379,10 @@ gulp.task("zip:steps-mind", gulp.series('zip:tmp',
     }
 ))
 
-gulp.task("zip:arrow-playwing", gulp.series('zip:tmp', 
+gulp.task("zip:arrow-playwing", gulp.series('zip:tmp',
     function() {
         return killOthers(/\/$|arrow_playwing\.html/);
-    }, 
+    },
     function() {
         return makeCopy('arrow_playwing.html', 'index')
     },
@@ -394,10 +394,10 @@ gulp.task("zip:arrow-playwing", gulp.series('zip:tmp',
     }
 ))
 
-gulp.task("zip:steps-black", gulp.series('zip:tmp', 
+gulp.task("zip:steps-black", gulp.series('zip:tmp',
     function() {
         return killOthers(/\/$|steps_black\.html/);
-    }, 
+    },
     function() {
         return makeCopy('steps_black.html', 'index')
     },
@@ -409,20 +409,36 @@ gulp.task("zip:steps-black", gulp.series('zip:tmp',
     }
 ))
 
+gulp.task("zip:dimoco-playwing-download", gulp.series('zip:tmp',
+    function() {
+        return killOthers(/\/$|dimoco_playwing_download\.html/);
+    },
+    function() {
+        return makeCopy('dimoco_playwing_download.html', 'index')
+    },
+    function() {
+        return killOthers(/\/$|index\.html/);
+    },
+    function() {
+        return createArchive(baseName + 'dimoco-playwing-download-template.zip')
+    }
+))
+
 /**
  * Creates the release archive
  */
 gulp.task("release", gulp.series(
-    "clean:build", 
-    "build", 
-    "zip:index", 
+    "clean:build",
+    "build",
+    "zip:index",
     "zip:index-black",
-    "zip:arrow", 
+    "zip:arrow",
     "zip:arrow-black",
-    "zip:steps", 
+    "zip:steps",
     "zip:steps-black",
     "zip:steps-mind",
     "zip:arrow-playwing",
+    "zip:dimoco-playwing-download",
 ));
 
 /**
