@@ -14,7 +14,7 @@ var path = {
     },
     src: {
         html: "./src/*.html",
-        js: ["./src/js/main.js"],
+        // js: ["./src/js/main.js"],
         style: "./src/style/main.scss",
         fontIcons: "./src/font_icons/icons/*.svg",
         img: [
@@ -177,25 +177,25 @@ gulp.task("css:build", gulp.series(gulp.parallel("css:build-ltr", "css:build-rtl
 /**
  * Build js
  */
-gulp.task("js:build", function() {
-    return gulp
-        .src(path.src.js)
-        .pipe(plumber())
-        .pipe(rigger())
-        .pipe(gulp.dest(path.build.js))
-        .pipe(sourcemaps.init())
-        .pipe(
-            minify({
-                ext: {
-                    min: ".min.js",
-                },
-                ignoreFiles: ["-min.js"],
-            })
-        )
-        .pipe(sourcemaps.write("./"))
-        .pipe(gulp.dest(path.build.js))
-        .pipe(webserver.reload({ stream: true }));
-});
+// gulp.task("js:build", function() {
+//     return gulp
+//         .src(path.src.js)
+//         .pipe(plumber())
+//         .pipe(rigger())
+//         .pipe(gulp.dest(path.build.js))
+//         .pipe(sourcemaps.init())
+//         .pipe(
+//             minify({
+//                 ext: {
+//                     min: ".min.js",
+//                 },
+//                 ignoreFiles: ["-min.js"],
+//             })
+//         )
+//         .pipe(sourcemaps.write("./"))
+//         .pipe(gulp.dest(path.build.js))
+//         .pipe(webserver.reload({ stream: true }));
+// });
 
 /**
  * Copy fonts
@@ -239,7 +239,7 @@ gulp.task(
         gulp.parallel(
             "html:build",
             "css:build",
-            "js:build",
+            // "js:build",
             "fonts:build",
             "image:build",
             "fonticons:build",
@@ -253,7 +253,7 @@ gulp.task(
 gulp.task("watch", function() {
     gulp.watch(path.watch.html, gulp.series("html:build", "replace:sys-blocks"));
     gulp.watch(path.watch.css, gulp.series("css:build"));
-    gulp.watch(path.watch.js, gulp.series("js:build"));
+    // gulp.watch(path.watch.js, gulp.series("js:build"));
     gulp.watch(path.watch.img, gulp.series("image:build"));
     gulp.watch(path.watch.fonts, gulp.series("fonts:build"));
     gulp.watch(path.watch.fontIcons, gulp.series("fonticons:build"));
