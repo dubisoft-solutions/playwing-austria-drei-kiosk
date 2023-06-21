@@ -250,18 +250,21 @@ h1 {
   font-size: 2.75rem;
   text-transform: uppercase;
   margin-bottom: 1.5rem;
+  color: #222223;
 }
 
 h2 {
   font-weight: bold;
   font-size: 1.25rem;
   margin-bottom: 1.5rem;
+  color: #222223;
 }
 
 h3 {
   font-weight: bold;
   font-size: 0.813rem;
   margin-bottom: 1.5rem;
+  color: #222223;
 }
 
 .text-description {
@@ -430,9 +433,6 @@ header {
 .index-white {
   background: linear-gradient(-180deg, #E8E8E8 0%, #FFFFFF 100%);
 }
-.index-white .notification-text {
-  color: #333333;
-}
 
 .index-grey {
   background: #EEEFF3;
@@ -486,7 +486,7 @@ header {
 .notification-text {
   font-weight: 400;
   font-size: 0.75rem;
-  color: #ECECEC;
+  color: #262626;
   padding-right: 0.938rem;
   text-align: start;
 }
