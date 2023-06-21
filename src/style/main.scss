@@ -111,9 +111,6 @@ header {
 
 .index-white {
     background: linear-gradient(180deg, #E8E8E8 0%, #FFFFFF 100%);
-    .notification-text {
-        color: $black;
-    }
 }
 
 .index-grey {
@@ -167,7 +164,7 @@ header {
 .notification-text {
     font-weight: 400;
     font-size: .75rem;
-    color: $grey-236;
+    color: $black-38;
     padding-left: .938rem;
     text-align: start;
 }
