@@ -1,1 +1,0 @@
-{"version":3,"names":[],"mappings":"","sources":["main.js"],"sourcesContent":["/**\n * Inits the app logic\n */\n$(function() {\n    main();\n}) \n\nfunction main() {\n    console.log(\"initialized\")\n}"],"file":"main.js"}
