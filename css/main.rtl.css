@@ -113,6 +113,11 @@
   text-transform: uppercase;
   padding: 0.938rem;
 }
+.arrow.playwing .btn-success .btn-icon-style,
+.steps.playwing .btn-success .btn-icon-style {
+  padding-left: 2.125rem;
+  display: grid;
+}
 .arrow.playwing.download .btn-success,
 .steps.playwing.download .btn-success {
   background: #00B262;
