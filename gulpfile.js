@@ -1,6 +1,6 @@
 "use strict";
 
-const baseName = 'playwing-austria-drei-kiosk-'
+const baseName = 'drei-'
 
 /* paths configuration */
 var path = {
