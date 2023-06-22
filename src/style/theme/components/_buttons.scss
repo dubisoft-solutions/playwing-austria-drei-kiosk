@@ -58,6 +58,10 @@
             box-shadow: 0px 4px 4px #24CB80;
             text-transform: uppercase;
             padding: .938rem;
+            .btn-icon-style {
+                padding-right: 2.125rem;
+                display: grid;
+            }
         }
         &.download {
             .btn-success {
