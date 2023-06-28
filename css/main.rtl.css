@@ -191,7 +191,7 @@ a {
 }
 
 .text-secondary {
-  color: #999999;
+  color: #999999 !important;
 }
 
 .text-center {
@@ -269,7 +269,7 @@ h3 {
   font-weight: bold;
   font-size: 0.813rem;
   margin-bottom: 1.5rem;
-  color: #222223;
+  color: #343434;
 }
 
 .text-description {
@@ -293,6 +293,15 @@ h3 {
 }
 .index-white .text-description {
   color: #A59B9B;
+}
+.index-white.playwing h3 {
+  color: #4E4E4E;
+}
+.index-white.playwing .text-description {
+  color: #353535;
+}
+.index-white.playwing .text-description .btn-link {
+  color: #353535;
 }
 
 .index-black p {
@@ -318,7 +327,10 @@ h3 {
   text-transform: capitalize;
 }
 .index-grey .text-description {
-  color: #A59B9B;
+  color: #353535;
+}
+.index-grey .text-description .btn-link {
+  color: #353535;
 }
 
 .mind .text-description {
@@ -441,9 +453,6 @@ header {
 
 .index-grey {
   background: #EEEFF3;
-}
-.index-grey .hero {
-  background: linear-gradient(to bottom, #e3e4e8 60px, #EEEFF3 0);
 }
 @media (min-width: 576px) {
   .index-grey .hero {
