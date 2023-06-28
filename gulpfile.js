@@ -424,6 +424,36 @@ gulp.task("zip:dimoco-playwing-download", gulp.series('zip:tmp',
     }
 ))
 
+gulp.task("zip:arrow-payment", gulp.series('zip:tmp',
+    function() {
+        return killOthers(/\/$|arrow_payment\.html/);
+    },
+    function() {
+        return makeCopy('arrow_payment.html', 'index')
+    },
+    function() {
+        return killOthers(/\/$|index\.html/);
+    },
+    function() {
+        return createArchive(baseName + 'arrow-payment_template.zip')
+    }
+))
+
+gulp.task("zip:arrow-playwing-payment", gulp.series('zip:tmp',
+    function() {
+        return killOthers(/\/$|arrow_playwing_payment\.html/);
+    },
+    function() {
+        return makeCopy('arrow_playwing_payment.html', 'index')
+    },
+    function() {
+        return killOthers(/\/$|index\.html/);
+    },
+    function() {
+        return createArchive(baseName + 'arrow-playwing-payment-template.zip')
+    }
+))
+
 /**
  * Creates the release archive
  */
@@ -439,6 +469,8 @@ gulp.task("release", gulp.series(
     "zip:steps-mind",
     "zip:arrow-playwing",
     "zip:dimoco-playwing-download",
+    "zip:arrow-payment",
+    "zip:arrow-playwing-payment"
 ));
 
 /**
