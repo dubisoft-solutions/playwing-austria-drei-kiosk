@@ -24,7 +24,7 @@ h3 {
     font-weight: bold;
     font-size: .813rem;
     margin-bottom: 1.5rem;
-    color: $black-34;
+    color: $black-52;
 }
 
 .text-description {
@@ -49,6 +49,17 @@ h3 {
     }
     .text-description {
         color: $grey;
+    }
+    &.playwing {
+        h3 {
+            color: $black-78;
+        }
+        .text-description {
+            color: $black-53;
+            .btn-link {
+                color: $black-53;
+            }
+        }
     }
 }
 
@@ -78,7 +89,10 @@ h3 {
         text-transform: capitalize;
     }
     .text-description {
-        color: $grey;
+        color: $black-53;
+        .btn-link {
+            color: $black-53;
+        }
     }
 }
 
