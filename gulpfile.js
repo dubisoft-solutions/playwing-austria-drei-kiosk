@@ -454,6 +454,36 @@ gulp.task("zip:arrow-playwing-payment", gulp.series('zip:tmp',
     }
 ))
 
+gulp.task("zip:playwing-mind-landing", gulp.series('zip:tmp',
+    function() {
+        return killOthers(/\/$|playwing_mind_landing\.html/);
+    },
+    function() {
+        return makeCopy('playwing_mind_landing.html', 'index')
+    },
+    function() {
+        return killOthers(/\/$|index\.html/);
+    },
+    function() {
+        return createArchive(baseName + 'playwing-mind-landing-template.zip')
+    }
+))
+
+gulp.task("zip:playwing-kiosk-landing", gulp.series('zip:tmp',
+    function() {
+        return killOthers(/\/$|playwing_kiosk_landing\.html/);
+    },
+    function() {
+        return makeCopy('playwing_kiosk_landing.html', 'index')
+    },
+    function() {
+        return killOthers(/\/$|index\.html/);
+    },
+    function() {
+        return createArchive(baseName + 'playwing-kiosk-landing-template.zip')
+    }
+))
+
 /**
  * Creates the release archive
  */
@@ -470,7 +500,9 @@ gulp.task("release", gulp.series(
     "zip:arrow-playwing",
     "zip:dimoco-playwing-download",
     "zip:arrow-payment",
-    "zip:arrow-playwing-payment"
+    "zip:arrow-playwing-payment",
+    "zip:playwing-mind-landing",
+    "zip:playwing-kiosk-landing",
 ));
 
 /**

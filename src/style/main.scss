@@ -129,6 +129,59 @@ header {
     }
 }
 
+.index-primary {
+    background-color: $dark-blue;
+    .text-description {
+        color: $grey-165;
+    }
+    .btn-link {
+        color: $grey-165;
+    }
+    .footer {
+        .list-inline {
+            .list-inline-item {
+                border-right: 1px solid $black-70;
+                .btn-link {
+                    color: $grey-165;
+                }
+            }
+            .list-inline-item.border-right:last-child {
+                border-right: 1px solid $black-70;
+            }
+        }
+    }
+    .main {
+        .hero {
+            padding: 0 0 1rem 0;
+        }
+    }
+    .btn-success {
+        font-weight: 600;
+        font-size: 1.5rem;
+        color: #fff;
+        background-color: $aqua-marine-29;
+        border-radius: .25rem;
+        border: none;
+        padding: 1.5rem;
+        text-decoration: none;
+        text-transform: uppercase;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        height: 5.125rem;
+    }
+    .btn-icon-style {
+        position: absolute;
+        right: 0;
+        padding-right: 3rem;
+        top: 0;
+        bottom: 0;
+        display: flex;
+        align-items: center;
+    }
+}
+
 .arrow,
 .steps {
     .banner {
