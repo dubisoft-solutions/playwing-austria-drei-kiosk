@@ -467,6 +467,53 @@ header {
   background: #222223;
 }
 
+.index-primary {
+  background-color: #181420;
+}
+.index-primary .text-description {
+  color: #A59B9B;
+}
+.index-primary .btn-link {
+  color: #A59B9B;
+}
+.index-primary .footer .list-inline .list-inline-item {
+  border-left: 1px solid #464646;
+}
+.index-primary .footer .list-inline .list-inline-item .btn-link {
+  color: #A59B9B;
+}
+.index-primary .footer .list-inline .list-inline-item.border-right:last-child {
+  border-left: 1px solid #464646;
+}
+.index-primary .main .hero {
+  padding: 0 0 1rem 0;
+}
+.index-primary .btn-success {
+  font-weight: 600;
+  font-size: 1.5rem;
+  color: #fff;
+  background-color: #1DC5A7;
+  border-radius: 0.25rem;
+  border: none;
+  padding: 1.5rem;
+  text-decoration: none;
+  text-transform: uppercase;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  height: 5.125rem;
+}
+.index-primary .btn-icon-style {
+  position: absolute;
+  left: 0;
+  padding-left: 3rem;
+  top: 0;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+}
+
 .arrow .banner,
 .steps .banner {
   min-height: 115vw;
